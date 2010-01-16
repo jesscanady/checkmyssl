@@ -12,6 +12,11 @@ class Site
   def initialize(site)
     @url = site
     
+    if @url == 'checkmyssl.com'
+      @status = :us
+      return
+    end
+    
     begin
       soc = TCPSocket.new(site, 443)
       ssl = SSL::SSLSocket.new(soc)

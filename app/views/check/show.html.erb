@@ -17,3 +17,7 @@
 <% if @site.status == :failure %>
 	<p class="subheading">We can't find that website. Maybe it's down?</p>
 <% end %>
+
+<% if @site.status == :us %>
+	<p class="subheading">We're not really a secure service here. Thanks for trying though.</p>
+<% end %>
