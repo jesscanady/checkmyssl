@@ -1,0 +1,19 @@
+<h1>SSL status for <%=h @site.url %></h1>
+
+<% if @site.status == :success %>
+	<% if @site.expired %>
+		<p class="subheading">SSL works, but...</p>
+		<p class="subheading">the certificate expired <%= time_ago_in_words(@site.expiry) %> ago.</p>
+	<% else %>
+		<p class="subheading">Looks good from here!</p>
+		<p class="subheading">The certificate expires in <%= time_ago_in_words(@site.expiry) %>.</p>
+	<% end %>
+<% end %>
+
+<% if @site.status == :not_ssl %>
+	<p class="subheading">Doesn't accept SSL connections in the first place.</p>
+<% end %>
+
+<% if @site.status == :failure %>
+	<p class="subheading">We can't find that website. Maybe it's down?</p>
+<% end %>

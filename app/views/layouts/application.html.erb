@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Check My SSL!</title>
+		<script type="text/javascript" src="/javascripts/application.js"></script>
+		<%= stylesheet_link_tag 'style' %>
+	</head>
+	
+	<body>
+		<div id="wrap">
+
+			<div id="main" class="clearfix">
+				<%= yield %>
+			</div>
+
+		</div>
+
+		<div id="footer">
+			<table>
+				<tr>
+					<th>What's this?</th>
+					<td>Check My SSL tells you when your SSL certificate will expire.</td>
+				</tr>
+				<tr>
+					<th>Is that it?</th>
+					<td>It reports errors, but aside from that, yeah. That's it.</td>
+				</tr>
+				<tr>
+					<th>Who's got two thumbs and built this thing?</th>
+					<td><a href="http://joncanady.com">This guy.</a> Hi, Jon Canady, it's a pleasure.</td>
+				</tr>
+				<tr>
+					<th>This is all valid HTML5 right?</th>
+					<td>It should be.</td>
+			</table>
+		</div>
+		
+	</body>
+</html>
